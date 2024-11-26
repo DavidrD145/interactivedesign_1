@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cockpitview</title>
+    <link rel="stylesheet" href="cockpitstyle">
+
+
+  </head>
+
+
+  <body>
+        <div class="backround-image">
+        <img src="cockpit.svg"
+        alt="cockpit"
+        margin: 0px;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        background-position: center center;
+        background-repeat:  no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+     
+        >
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+        // setup master volume
+        $( "#vertical" ).slider({
+      value: 60,
+      orientation: "",
+      range: "min",
+      animate: true
+        });;;
+         // setup graphic EQ
+        $( "#horizontal > span" ).each(function() {
+      // read initial values from markup and remove that
+      var value = parseInt( $( this ).text(), 10 );
+      $( this ).empty().slider({
+        value: value,
+        range: "min",
+        animate: true,
+        orientation: "vertical"
+            });
+            });
+        } );
+        </script>
+
+
+ 
+        <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+        <span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
+           variable
+            </p>
+ 
+        <div id="variable" style="width:260px; margin:15px;"></div>
+ 
+        </div>
+
+        
+
+   
+
+
+  
+    </body>
+
+
+
+</html>

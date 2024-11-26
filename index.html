@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="redpillbluepillstyle.css">
+    <title>Red Pill Blue Pill</title>
+
+    <style>
+
+.pill-button {
+            font-family: 'Kode Mono', monospace;
+            padding: 10px 20px;
+            margin: auto;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            transition: transform 0.2s;
+            justify-content: center;
+        }
+        
+        .red-pill {
+            background-color: #ff0000;
+            color: white;
+           justify-content: center;
+        }
+        
+        .blue-pill {
+            background-color: #0000ff;
+            color: white;
+           justify-content: center;
+        }
+        
+
+       
+    </style>
+   
+       
+
+</head>
+<body>
+    <div class="buttoncase">
+        <a href="file:///C:/Users/david/OneDrive/Documents/school/interactive%201/kode%20mono/kode%20mono%20web/matrixrain/matrixrain.html">
+        <button class="pill-button red-pill" onclick="showGif('red')">Take Red Pill</button>
+        </a>
+       
+    
+    
+
+    <a href="page2.html">
+        <button class="pill-button blue-pill" onclick="showGif('blue')">Take Blue Pill</button>
+        <div class="button-container">
+        </a>
+        </div>
+    </body>
+    
+
+        <script>
+            function showGif(pillColor) {
+                const container = document.getElementById('gifContainer');
+                const gifUrl = pillColor === 'red' 
+                    ? 'path/to/red-pill.gif'   // Replace with your red pill GIF URL
+                    : 'path/to/blue-pill.gif'; // Replace with your blue pill GIF URL
+                
+                container.innerHTML = `<img src="${gifUrl}" alt="${pillColor} pill effect">`;
+            }
+        </script>
+    </div>
+</body>
+</html>

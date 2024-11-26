@@ -1,0 +1,127 @@
+/* Load the variable font 
+// <uniquifier>: Use a unique and descriptive class name
+/* // <weight>: Use a value from 400 to 700 */
+
+
+
+.kode-mono{
+  font-family: "Kode Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+:root {
+  --text-weight: 500;
+  --text-width: 100;
+  --text-slant: 0;
+
+}
+
+html {
+  box-sizing: border-box;
+  background-color: black;
+
+ 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: #47e17d;
+  
+
+}
+
+.container {
+  font-family: "Kode Mono", serif;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 3rem;
+  text-align: center;
+  
+}
+
+.demo-text {
+  font-size: 5rem;
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  margin: 0;
+  color: #47e17d;
+  background-color: #4c9f69;
+}
+
+.controls {
+  margin-top: 3rem;
+}
+
+.slider-container:not(:first-child) {
+  margin-top: 3rem;
+} 
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+ 
+  
+}
+
+.slider-label {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-variation-settings: "slnt" var(--text-slant);
+  font-weight: 650;
+  background-color: #4c9f69;
+}
+
+.output {
+  font-style: normal;
+  font-variation-settings: "slnt" var(--text-slant);
+  font-weight: 400;
+
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1rem;
+  border-radius: .25rem;
+  background:  #4c9f69;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #47e17d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #456bd9;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+
+
