@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sliderstyle.css">
+    <title>Font Weight Slider</title>
+    <style>
+        body {
+            font-family: 'Kode Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .demo-text {
+            font-weight: 500; /* Default weight */
+            margin-bottom: 20px;
+        }
+        .slider-container {
+            width: 300px;
+        }
+        .slider-label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div>
+            <input type="text" class="demo-text" value="" placeholder="Type here...">
+        
+        </div>
+        <div class="controls">
+            <!-- Weight Controls -->
+            <div class="slider-container">
+                <input type="range" min="100" max="900" value="500" class="slider" id="text-weight" name="text-weight" data-index="0">
+                <div class="slider-controls">
+                    <label for="text-weight" class="slider-label">
+                        Weight: <span class="output" data-index="0">500</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <a href="C:\Users\david\OneDrive\Documents\school\interactive 1\kode mono\kode mono web\back2kodemono\back2kodemono.html" button class="next-page-btn">Next Page →</a>
+    </main>
+
+    <script>
+        const container = document.querySelector(".container");
+        const sliders = document.querySelectorAll(".slider");
+        const sliderValues = document.querySelectorAll(".output");
+        const buttons = document.querySelectorAll(".button");
+
+        // Display initial slider values
+        sliders.forEach((slider, index) => {
+            sliderValues[index].innerHTML = slider.value;
+        });
+
+        // Update text property and displayed property value for each slider
+        sliders.forEach(slider => {
+            const sliderIndex = slider.getAttribute("data-index");
+            const output = document.querySelector(`.output[data-index="${sliderIndex}"]`);
+            slider.oninput = function() {
+                container.style.setProperty(`--${this.id}`, this.value);
+                output.innerHTML = this.value;
+                // Update the demo text weight
+                document.querySelector('.demo-text').style.fontWeight = this.value;
+            };
+        });
+
+        // Reset text property and update display property value for each slider
+        buttons.forEach(button => {
+            const buttonIndex = button.getAttribute("data-index");
+            const resetOutput = document.querySelector(`.output[data-index="${buttonIndex}"]`);
+            const resetSlider = document.querySelector(`.slider[data-index="${buttonIndex}"]`);
+            button.onclick = function() {
+                resetSlider.value = resetSlider.defaultValue;
+                resetOutput.innerHTML = resetSlider.defaultValue;
+                // Reset the demo text weight
+                document.querySelector('.demo-text').style.fontWeight = resetSlider.defaultValue;
+                console.log(resetSlider.defaultValue);
+            };
+        });
+    </script>
+</body>
+</html>

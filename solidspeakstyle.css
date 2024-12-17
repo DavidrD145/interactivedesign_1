@@ -1,0 +1,47 @@
+body{background-color: black;
+
+} 
+.typewriter {
+  font-family: 'Kode Mono', monospace;
+  color: rgb(141, 227, 119);
+  overflow: hidden;
+  width: max-content;
+  border-right: .15em solid #666;
+  white-space: nowrap ;
+  margin:  auto;
+  letter-spacing: .15em;
+  
+  animation: typing 3.5s steps(40, end),
+             blink-caret .75s steps(2);
+}
+
+@keyframes typing {
+  from { width: 0}
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(141, 227, 119); }
+}
+
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: rgb(141, 227, 119);
+  background-color: seagreen;
+  font-family: "Kode Mono", serif;
+  border: 3px solid;
+  border-style: ridge;
+  border-radius: 5px; 
+  border-color: rgb(90, 90, 97);
+  outline-color: rgb(221, 221, 254);
+  outline-style: groove;
+}
+

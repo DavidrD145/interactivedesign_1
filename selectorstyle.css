@@ -1,0 +1,29 @@
+.kode-mono{
+    font-family: "Kode Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+img{
+    max-width:700px;
+}
+
+Body{
+    font-family: "Kode Mono", serif;
+
+}
+p{
+    color: rgb(0, 0, 0);
+
+}
+
+
+h1{
+    color: rgb(0, 0, 0);
+
+}
+
+P{
+    color: rgb(0, 0, 0);
+}
