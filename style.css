@@ -1,0 +1,120 @@
+*{
+    border: 1px solid red;
+}
+
+
+.container{
+    
+}
+header{
+    font-family: "Kode Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    font-size: 3em;
+    color: rgb(141, 227, 119);
+    text-align: center;
+    padding: 5px; 
+    margin: 5px 10px 0px 50px;
+    background-color: rgba(35, 91, 42, 0.443);
+    border: 1rem solid;
+    border-style: ridge;
+    border-radius: 5px; 
+    border-color: rgb(90, 90, 97);
+    outline-color: rgb(221, 221, 254);
+    outline-style: groove;
+    outline: 200
+
+}
+
+
+body { 
+    width: auto;
+    padding: 3px; 
+    margin: 3px;
+    background-color: rgb(27, 26, 26);
+    border: 10px ridge rgb(90, 90, 97); 
+    border-radius: 30px;
+    outline-color: rgb(221, 221, 254);
+    outline-style: groove;
+    outline: 210 
+   
+}
+
+ main{
+    font-family: "Kode Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    font-size: 3em;
+    color: rgb(141, 227, 119);
+    text-align: center;
+    padding: 5px; 
+    margin: 5px 10px 0px 50px;
+    background-color: rgba(35, 91, 42, 0.443);
+    border: 1rem solid;
+    border-style: ridge;
+    border-radius: 5px; 
+    border-color: rgb(90, 90, 97);
+    outline-color: rgb(221, 221, 254);
+    outline-style: groove;
+    outline: 200
+
+}
+
+       
+    button {
+    
+        font-family: "Kode Mono", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2em;
+        color: rgb(90, 90, 97);
+        background-color: rgb(27, 26, 26);
+        padding: 1px;  
+        display: block;
+        margin: 100px, 10px,100px 10px; 
+        border-radius: 50%; 
+        border : 15px solid;
+        border-color: rgb(90, 90, 97);
+        border-style: groove;
+        outline-color: silver;
+        outline: 2px;
+        
+
+
+}
+.buttoncase{
+    transform: 0px;
+    margin: -165px 30px 0px 8px;
+    width: 32px ;
+    border-radius: 30px;
+    height: absolute;
+    float:left;
+  
+    
+}
+    
+
+
+footer {
+      font-family: "Kode Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    font-size: 3em;
+    color: rgb(141, 227, 119);
+    text-align: center;
+    padding: 5px; 
+    margin: 5px 10px 45px 50px;
+    background-color: rgba(35, 91, 42, 0.443);
+    border: 1rem solid;
+    border-style: ridge;
+    border-radius: 5px; 
+    border-color: rgb(90, 90, 97);
+    outline-color: rgb(221, 221, 254);
+    outline-style: groove;
+    outline: 200
+}
+   

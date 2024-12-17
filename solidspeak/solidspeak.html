@@ -7,86 +7,106 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@100;400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="solidspeakstyle.css">
+      <link rel="script" href="solidspeakscript.js"
       <title>solidspeak</title>
       
       </head>
 
-  
-      <body>
-          <div class="containter">
-               <div class="textcontainer">
-                     
-                 
-                     </div>
-
-
-
-                     <div>
-                        <speakingmanphotogif>
-
-
-                        </speakingmanphotogif>
-                     </div>
-
-                     <div>
-                      <p class="typewriter">
-                                 Hello. I have a top priority level mission for you.
-                                 Your Mission is to decifer these panagrams. I will relay these messages to you. 
-                                 You will have to use your skills to decifer them. Good  luck. 
-                                 You will be rewarded at the end of the mission. 
-                                 
-
-                                 
-                                 Back in June we delivered oxygen equipment of the same size.
-
-                                 A quick movement of the enemy will jeopardize six gunboats. 
-
-                                 Painful zombies quickly watch a jinxed graveyard.
-
-                                 Ebenezer unexpectedly bagged two tranquil aardvarks with his jiffy vacuum cleaner.
-
-                                 No kidding -- Lorenzo called off his trip to visit Mexico City just because they told him the conquistadores were extinct. 
-
-                                 We promptly judged antique ivory buckles for the next prize. 
-
-                                 As we explored the gulf in Zanzibar, we quickly moved closer to the jutting rocks.
-
-                              </p>
-
-
-                        </speakingmanphototext>
-                        <div className={styles.speakingmanphototext}>
-                           <p className={styles.typewriter}>
-                             {speakingManPhotoText}
-                           </p>
-                         </div>
-                         <button className={styles.next_button} onClick={handleNextPage}>
-                           Next Page →
-                         </button>
-                     </div>
-
-
-               <header>
-                  <p> </p>
-              
-               </header>
-      
-         
-  
-          <Main>
-              <p>  </p>
-              
-  
-          </Main>
-          
-      
-          <footer>
-              <p> </p>
-          </footer>
-         
-           </div>
-  
-          </div>
-      </body>
-  
-  </html>
+      <div class="container">
+        <div class="textcontainer">
+            <div id="text-lines">
+                <p class="typewriter-line">Hello. I have a top priority level mission for you.</p>
+                <p class="typewriter-line">Your Mission is to decifer these panagrams. I will relay these messages to you.</p>
+                <p class="typewriter-line">You will have to use your skills to decifer them. Good luck.</p>
+                <p class="typewriter-line">You will be rewarded at the end of the mission.</p>
+                <p class="typewriter-line">Back in June we delivered oxygen equipment of the same size.</p>
+                <p class="typewriter-line">A quick movement of the enemy will jeopardize six gunboats.</p>
+                <p class="typewriter-line">Painful zombies quickly watch a jinxed graveyard.</p>
+                <p class="typewriter-line">Ebenezer unexpectedly bagged two tranquil aardvarks with his jiffy vacuum cleaner.</p>
+                <p class="typewriter-line">No kidding -- Lorenzo called off his trip to visit Mexico City just because they told him the conquistadores were extinct.</p>
+                <p class="typewriter-line">We promptly judged antique ivory buckles for the next prize.</p>
+                <p class="typewriter-line">As we explored the gulf in Zanzibar, we quickly moved closer to the jutting rocks.</p>
+            </div>
+        </div>
+    
+        <a href="C:\Users\david\OneDrive\Documents\school\interactive 1\kode mono\kode mono web\slider\slider.html" class="next-button">Next Page →</a>
+    </div>
+    
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+    
+        .typewriter-line {
+            font-family: 'Kode Mono', monospace;
+            color: rgb(141, 227, 119);
+            overflow: hidden;
+            white-space: pre-wrap;
+            margin: 0;
+            margin-bottom: 1em;
+            opacity: 0;
+            width: 0;
+            letter-spacing: .15em;
+        }
+    
+        .typewriter-line.active {
+            animation: 
+                typing 2s steps(40, end) forwards,
+                blink-caret .75s step-end ;
+            opacity: 1;
+        }
+    
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+    
+        @keyframes blink-caret {
+            from, to { border-right: .15em solid transparent }
+            50% { border-right: .15em solid rgb(141, 227, 119) }
+        }
+    
+        .nextbutton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: rgb(141, 227, 119);
+            background-color: seagreen;
+            font-family: "Kode Mono", serif;
+            border: 3px solid;
+            border-style: ridge;
+            border-color: rgb(90, 90, 97);
+            outline-color: rgb(221, 221, 254);
+            outline-style: groove;
+            text-decoration: none;
+        }
+    
+        .nextbutton:hover {
+            background-color: #555;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lines = document.querySelectorAll('.typewriter-line');
+            let currentLine = 0;
+    
+            function typeLine() {
+                if (currentLine < lines.length) {
+                    lines[currentLine].classList.add('active');
+                    currentLine++;
+                    setTimeout(typeLine, 2500); // Wait 2.5 seconds before starting the next line
+                }
+            }
+    
+            typeLine();
+        });
+    </script>
